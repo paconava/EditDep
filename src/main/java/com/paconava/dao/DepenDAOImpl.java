@@ -1,13 +1,10 @@
-package net.codejava.spring.dao;
+package com.paconava.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import javax.sql.DataSource;
-import net.codejava.spring.model.Dependencia;
-import net.codejava.spring.model.Programa;
-import net.codejava.spring.model.Subdependencia;
-import net.codejava.spring.model.Subprograma;
+import com.paconava.model.*;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
