@@ -1,13 +1,10 @@
-package net.codejava.spring.controller;
+package com.paconava.controller;
 
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
-import net.codejava.spring.dao.DepenDAO;
-import net.codejava.spring.model.Dependencia;
-import net.codejava.spring.model.Subdependencia;
-import net.codejava.spring.model.Programa;
-import net.codejava.spring.model.Subprograma;
+import com.paconava.dao.DepenDAO;
+import com.paconava.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
