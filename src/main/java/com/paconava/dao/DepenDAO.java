@@ -1,11 +1,8 @@
-package net.codejava.spring.dao;
+package com.paconava.dao;
 
 import java.util.List;
 
-import net.codejava.spring.model.Subdependencia;
-import net.codejava.spring.model.Subprograma;
-import net.codejava.spring.model.Dependencia;
-import net.codejava.spring.model.Programa;
+import com.paconava.model.*;
 
 /**
  * Defines DAO operations for the model.
