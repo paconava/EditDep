@@ -1,4 +1,4 @@
-package net.codejava.spring.config;
+package com.paconava.config;
 
 import java.io.IOException;
 import javax.sql.DataSource;
