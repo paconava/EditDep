@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Manejador de Subdependencias</title>
+        <link href="./webjars/jquery-ui/1.9.2/css/smoothness/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script src="./resources/js/jquery-1.11.1.min.js"></script>
+
+        <script src="./resources/js/jquery-ui-1.9.2.custom.js"></script>
+		<script src="./resources/js/colegioadministracion.js"></script>
+		<link href="./resources/css/template/pnotify.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet" type="text/css">
+		<link href="./resources/css/colegioadministracion.css" rel="stylesheet">
+        
+      	<link href="./resources/css/template/bootstrap.css" rel="stylesheet">
+      	<script src="./resources/js/template/jquery-2.2.1.js"></script>
+		<script src="./resources/js/template/bootstrap.js"></script>
+		<script src="jquery.js"></script> 
+	    <script> 
+	    	$(function(){
+		      $("#cabecera").load("./resources/header.html");
+		      $("#pieDePag").load("./resources/footer.html");
+	    	});
+	    </script> 
+    </head>
+    <body>
+    <div>
+		<div id="cabecera"></div>
+   </div>
+<div class="bloque-responsivo top-150">
+
+	<h4><td th:text="${depen.clave_comp}">...</td></h4>
+	<h4><td th:text="${depen.desc}">...</td></h4>
+	<h4><td th:text="${depen.clave_ds}">...</td></h4>
+	<h4><td th:text="${depen.clave_s}">...</td></h4>
+	<h4><td th:text="${depen.status}">...</td></h4>
+	<h4><td th:text="${depen.tipo_desc}">...</td></h4>
+
+    	<div align="center">
+	        
+			<br /><br /><br /><br />
+    	</div>
+    	
+    	</div>
+    	
+    	<div id="pieDePag"></div>
+    </body>
+</html>

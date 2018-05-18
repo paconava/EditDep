@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+
+<title>Nueva/editar Subdependencia</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Editar Subependencia</h1>
+		
+		<form action="#" th:action="@{/saveDepen}" th:object="${depen}" method="post">
+	    	<p>Id: <input type="text" th:field="*{id}" /></p>
+	        <p>Message: <input type="text" th:field="*{content}" /></p>
+	        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+	    </form>
+		
+		
+		<form:form action="saveDepen" method="post" modelAttribute="depen" accept-charset="UTF-8">
+		<table>
+			<form:hidden path="clave_comp"/>
+			<tr>
+				<td>Descripción:</td>
+				<td><input path="desc" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="Guardar"></td>
+			</tr>
+		</table>
+		</form>
+	</div>
+</body>
+</html>

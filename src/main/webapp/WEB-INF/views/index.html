@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Manejador de Subdependencias</title>
+        <link href="./webjars/jquery-ui/1.9.2/css/smoothness/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script src="./resources/js/jquery-1.11.1.min.js"></script>
+
+        <script src="./resources/js/jquery-ui-1.9.2.custom.js"></script>
+		<script src="./resources/js/colegioadministracion.js"></script>
+		<link href="./resources/css/template/pnotify.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet" type="text/css">
+		<link href="./resources/css/colegioadministracion.css" rel="stylesheet">
+        
+      	<link href="./resources/css/template/bootstrap.css" rel="stylesheet">
+      	<script src="./resources/js/template/jquery-2.2.1.js"></script>
+		<script src="./resources/js/template/bootstrap.js"></script>
+		<script src="jquery.js"></script> 
+	    <script> 
+	    	$(function(){
+		      $("#cabecera").load("./resources/header.html");
+		      $("#pieDePag").load("resources/footer.html");
+	    	});
+	    </script> 
+    </head>
+    <body>
+    <div>
+		<div id="cabecera"></div>
+   </div>
+<div class="bloque-responsivo top-150">
+
+	<h3>76401 - Dirección General de Servicios Administrativos</h3>
+    	<div align="center">
+	        <h3>Búsqueda por dependencia</h3>
+		    <!-- form action="#" accept-charset="UTF-8" th:action="@{/filter}" th:object="${res}" method="post">
+		    	<p>Buscar por dependencia: <input type="text" size="3" th:field="*{clave_ds}" /></p>
+		        <p>Message: <input type="text" size="40" th:field="*{name}" /></p>
+		        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+	    	</form> -->
+	       	<form action="#" accept-charset="UTF-8" th:action="@{/subdependencias}" method="get">
+	       	<div class="form-row">
+		      <div class="form group col-md-3">
+		      </div>
+		      <div class="form group col-md-6">
+		        No. de dependencia: <input type="text" name="cve_depen" size="3">
+	        	<input type="submit" class="btn btn-light" value="Buscar">
+		      </div>
+		      <div class="form group col-md-3">
+		      </div>
+		    </div>
+	    	</form>
+	    	
+	    	<div align="center" th:if="${depenNotFound}">
+		         <h4>La dependencia no existe.</h4>
+	    	</div>
+			<a href="new-depen" th:href="@{/new-depen}">Nueva dependencia</a>
+			<br /><br /><br /><br />
+    	</div>
+    	
+    	</div>
+    	
+    	<div id="pieDePag"></div>
+    </body>
+</html>

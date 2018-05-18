@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Manejador de Subdependencias</title>
+        <link href="./webjars/jquery-ui/1.9.2/css/smoothness/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script src="./resources/js/jquery-1.11.1.min.js"></script>
+
+        <script src="./resources/js/jquery-ui-1.9.2.custom.js"></script>
+		<script src="./resources/js/colegioadministracion.js"></script>
+		<link href="./resources/css/template/pnotify.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet" type="text/css">
+		<link href="./resources/css/colegioadministracion.css" rel="stylesheet">
+        
+      	<link href="./resources/css/template/bootstrap.css" rel="stylesheet">
+      	<script src="./resources/js/template/jquery-2.2.1.js"></script>
+		<script src="./resources/js/template/bootstrap.js"></script>
+		<script src="jquery.js"></script> 
+	    <script> 
+	    	$(function(){
+		      $("#cabecera").load("./resources/header.html");
+		      $("#pieDePag").load("./resources/footer.html");
+	    	});
+	    	function goBack() {
+	    	    window.history.back();
+	    	}
+	    </script> 
+    </head>
+    <style>
+	    	table,th,td {
+	    		border-collapse: collapse;
+	    		padding: 5px;
+	    	}
+	    </style>
+    <body>
+    <div>
+		<div id="cabecera"></div>
+   </div>
+<div class="bloque-responsivo top-150">
+
+
+	    <form action="#" accept-charset="UTF-8" th:action="@{/saveProg}" th:object="${prog}" method="post">
+	    	<center>
+	    	<div class="table-responsive">
+		        <table class="table table-striped">
+	        	<th>Dependencia</th>
+	        	<th>Subdependencia</th>
+	        	<th>Programa</th>
+	        	<th>Descripci&oacute;n</th>
+	        	<th>Clave Compuesta</th>
+	        	<th></th>
+	        	
+	        	<tr>
+	        		<td><input type="text" size="3" th:field="*{clave_dp}" readonly /></td>
+	        		<td><input type="text" size="2" th:field="*{clave_sdp}" readonly /></td>
+	        		<td><input type="text" size="2" th:field="*{clave_p}" /></td>
+	        		<td><input type="text" size="30" th:field="*{desc}" /></td>
+			        <td><input type="text" size="7" th:field="*{clave_comp}" /></td>
+			        <td>
+			        	<input type="submit" class="btn btn-light" value="Guardar" />
+			        	<!--  input type="reset" value="Reset" / -->
+			        </td>
+	        	</tr>
+				</th:block>	        	
+			</table>
+			</div>
+			</center>	        
+	    </form>
+
+    	<div align="center">
+	         <form action="#" accept-charset="UTF-8" th:action="@{/programas}" method="get">
+	    		<input type="hidden" name="clave_comp" th:value="${clave_comp}" size="3" />
+	        	<input type="submit" class="btn btn-light" value="Regresar" />
+	    	</form>
+    	</div>
+    	
+    	</div>
+    	
+    	<div id="pieDePag"></div>
+    </body>
+</html>

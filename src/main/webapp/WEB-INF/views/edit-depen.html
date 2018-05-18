@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Manejador de Subdependencias</title>
+        <link href="./webjars/jquery-ui/1.9.2/css/smoothness/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script src="./resources/js/jquery-1.11.1.min.js"></script>
+
+        <script src="./resources/js/jquery-ui-1.9.2.custom.js"></script>
+		<script src="./resources/js/colegioadministracion.js"></script>
+		<link href="./resources/css/template/pnotify.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet" type="text/css">
+		<link href="./resources/css/colegioadministracion.css" rel="stylesheet">
+        
+      	<link href="./resources/css/template/bootstrap.css" rel="stylesheet">
+      	<script src="./resources/js/template/jquery-2.2.1.js"></script>
+		<script src="./resources/js/template/bootstrap.js"></script>
+		<script src="jquery.js"></script> 
+	    <script> 
+	    	$(function(){
+		      $("#cabecera").load("./resources/header.html");
+		      $("#pieDePag").load("./resources/footer.html");
+	    	});
+	    	function goBack() {
+	    	    window.history.back();
+	    	}
+	    </script> 
+    </head>
+    <style>
+	    	table,th,td {
+	    		border-collapse: collapse;
+	    		padding: 5px;
+	    	}
+	    </style>
+    <body>
+    <div>
+		<div id="cabecera"></div>
+   </div>
+<div class="bloque-responsivo top-150">
+
+
+	    <form action="#" accept-charset="UTF-8" th:action="@{/saveDepen(clave=${numDepen})}" th:object="${depen}" method="post">
+	    	<center>
+	    	<div class="table-responsive">
+		        <table class="table table-striped">
+	        	<th>No. de Dependencia</th>
+	        	<th>Descripción</th>
+	        	<th></th>
+	        	
+	        	<tr>
+	        		<td><input type="text" size="3" th:field="*{id}" /></td>
+	        		<td><input type="text" size="30" th:field="*{name}" /></td>
+			        <td>
+			        	<input type="submit" value="Guardar" />
+			        	<!--  input type="reset" value="Reset" / -->
+			        </td>
+	        	</tr>
+				</th:block>	        	
+			</table>
+			</div>
+			</center>	        
+	    </form>
+
+    	<div align="center">
+	         <button onclick="goBack()">Regresar</button>
+			<br /><br /><br /><br /><br /><br />
+    	</div>
+    	
+    	</div>
+    	
+    	<div id="pieDePag"></div>
+    </body>
+</html>
