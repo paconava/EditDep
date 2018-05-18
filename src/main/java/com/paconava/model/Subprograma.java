@@ -1,4 +1,4 @@
-package net.codejava.spring.model;
+package com.paconava.model;
 
 public class Subprograma {
 	private Integer clave_dsp;
